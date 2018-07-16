@@ -31,7 +31,9 @@ public class BranchPageSteps {
     @And("^I enter new branch name as \"([^\"]*)\" and code \"([^\"]*)\"$")
     public void enterBranch(String branchName, String code) throws InterruptedException{
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CreateBranchForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("NewBranchName"))).clear();
         driver.findElement(By.xpath(CONFIG.getProperty("NewBranchName"))).sendKeys(branchName);
+        driver.findElement(By.xpath(CONFIG.getProperty("NewBranchCode"))).clear();
         driver.findElement(By.xpath(CONFIG.getProperty("NewBranchCode"))).sendKeys(code);
     }
 
@@ -58,4 +60,31 @@ public class BranchPageSteps {
                 "Cannot verify searched branch is found");
     }
 
+    @And("^I click on view branch button$")
+    public void iClickViewBranchBtn() {
+        driver.findElement(By.xpath(CONFIG.getProperty("ViewBranchBtn"))).click();
+    }
+
+    @And("^I click on edit branch button$")
+    public void iClickEditBranchBtn() throws InterruptedException {
+        driver.findElement(By.xpath(CONFIG.getProperty("EditBranch"))).click();
+        Thread.sleep(2000);
+    }
+
+    @And("^I click on delete branch button$")
+    public void iClickDeleteBranchBtn() {
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteBranch"))).click();
+    }
+
+    @And("^I click on confirm delete branch$")
+    public void iClickConfirmDeleteBranchBtn() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteConfirmBtn"))).submit();
+    }
+
+    @And("^I click on cancel delete branch$")
+    public void iClickCancelDeleteBranchBtn() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteCancelBtn"))).click();
+    }
 }

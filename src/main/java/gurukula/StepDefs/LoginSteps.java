@@ -31,7 +31,6 @@ public class LoginSteps {
         driver.findElement(By.xpath(CONFIG.getProperty("AuthenticateBtn"))).click();
     }
 
-
     @When("^I validate Login failure$")
     public void iValidateLoginFailure() throws InterruptedException {
         String expected = driver.findElement(By.xpath(CONFIG.getProperty("FailureMsg"))).getText();
