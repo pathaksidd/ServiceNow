@@ -1,7 +1,7 @@
-Feature: Add new staff feature
+Feature: Edit staff feature
 
   @regression
-  Scenario Outline: Create a new staff member and save
+  Scenario Outline: Search for a staff, edit it and save
 
     Given I navigate to Gurukula home page
     And I click on link to Login page
@@ -11,21 +11,20 @@ Feature: Add new staff feature
     And I verify user has logged in
     And I click on Staff option from Entity dropdown
     And I verify user landed on Staffs screen
-    Then I click on create new staff button
-    And I enter new staff name as "<staffname>" and select branch as "<branchname>"
+    Then I enter staff name as "<staffname>" in search box and click search button
+    And I verify "<staffname>" staff is found
+    And I click on edit staff button
+    And I enter new staff name as "<newstaffname>" and select branch as "<newbranch>"
     And I click on save new staff
     And I close the browser
 
     Examples: Login credentials
 
-      | username | password | staffname  | branchname     |
-      | admin    | admin    | hector     |                |
-#      | admin    | admin    | james      | brancha        |
-#      | admin    | admin    | james      | kkbranch       |
-
+      | username | password | staffname | newstaffname | newbranch |
+      | admin    | admin    | oscar     | newoscar     | branchs   |
 
   @regression
-  Scenario Outline: Create a new staff member and cancel
+  Scenario Outline: Search for a staff, edit it and cancel
 
     Given I navigate to Gurukula home page
     And I click on link to Login page
@@ -35,12 +34,13 @@ Feature: Add new staff feature
     And I verify user has logged in
     And I click on Staff option from Entity dropdown
     And I verify user landed on Staffs screen
-    Then I click on create new staff button
-    And I enter new staff name as "<staffname>" and select branch as "<branchname>"
+    Then I enter staff name as "<staffname>" in search box and click search button
+    And I verify "<staffname>" staff is found
+    And I click on edit staff button
     And I click on cancel new staff
     And I close the browser
 
     Examples: Login credentials
 
-      | username | password | staffname  | branchname    |
-      | admin    | admin    | benjy      | branchk       |
+      | username | password | staffname    | newstaffname  | newbranch |
+      | admin    | admin    | sid          | newkylian     | branchs   |

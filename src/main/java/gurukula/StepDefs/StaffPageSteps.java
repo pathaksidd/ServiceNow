@@ -32,6 +32,7 @@ public class StaffPageSteps {
     @And("^I enter new staff name as \"([^\"]*)\" and select branch as \"([^\"]*)\"$")
     public void enterBranch(String staffName, String branchName) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CreateStaffForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("NewStaffName"))).clear();
         driver.findElement(By.xpath(CONFIG.getProperty("NewStaffName"))).sendKeys(staffName);
         Select branchDropdown = new Select(driver.findElement(By.xpath(CONFIG.getProperty("NewStaffBranchDropdown"))));
         branchDropdown.selectByVisibleText(branchName);
@@ -79,4 +80,15 @@ public class StaffPageSteps {
         driver.findElement(By.xpath(CONFIG.getProperty("DeleteStaffBtn"))).click();
     }
 
+    @And("^I click on confirm delete staff$")
+    public void iClickConfirmDeleteStaffBtn() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteStaffForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteStaffConfirmBtn"))).submit();
+    }
+
+    @And("^I click on cancel delete staff$")
+    public void iClickCancelDeleteStaffBtn() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteStaffForm"))));
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteStaffCancelBtn"))).click();
+    }
 }

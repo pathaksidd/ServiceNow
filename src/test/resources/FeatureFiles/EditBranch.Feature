@@ -24,7 +24,7 @@ Feature: Edit branch feature
       | admin    | admin    | branchnn   | 0003       | newbranchnn   | 0003          |
 
   @regression
-  Scenario Outline: Search for a branch and edit it
+  Scenario Outline: Search for a branch, click edit and cancel
 
     Given I navigate to Gurukula home page
     And I click on link to Login page

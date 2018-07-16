@@ -79,12 +79,12 @@ public class BranchPageSteps {
     @And("^I click on confirm delete branch$")
     public void iClickConfirmDeleteBranchBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
-        driver.findElement(By.xpath(CONFIG.getProperty("DeleteConfirmBtn"))).submit();
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteBranchConfirmBtn"))).submit();
     }
 
     @And("^I click on cancel delete branch$")
     public void iClickCancelDeleteBranchBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
-        driver.findElement(By.xpath(CONFIG.getProperty("DeleteCancelBtn"))).click();
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteBranchCancelBtn"))).click();
     }
 }
