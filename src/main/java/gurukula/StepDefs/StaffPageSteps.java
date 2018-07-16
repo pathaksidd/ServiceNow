@@ -30,7 +30,7 @@ public class StaffPageSteps {
     }
 
     @And("^I enter new staff name as \"([^\"]*)\" and select branch as \"([^\"]*)\"$")
-    public void enterBranch(String staffName, String branchName) throws InterruptedException{
+    public void enterBranch(String staffName, String branchName) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CreateStaffForm"))));
         driver.findElement(By.xpath(CONFIG.getProperty("NewStaffName"))).sendKeys(staffName);
         Select branchDropdown = new Select(driver.findElement(By.xpath(CONFIG.getProperty("NewStaffBranchDropdown"))));
@@ -50,7 +50,7 @@ public class StaffPageSteps {
     }
 
     @And("^I enter staff name as \"([^\"]*)\" in search box and click search button$")
-    public void enterStaffNameInSearchBox(String staffName) throws InterruptedException{
+    public void enterStaffNameInSearchBox(String staffName) throws InterruptedException {
         driver.findElement(By.xpath(CONFIG.getProperty("SearchStaffTxtBox"))).sendKeys(staffName);
         driver.findElement(By.xpath(CONFIG.getProperty("SearchStaffBtn"))).click();
         Thread.sleep(1000);
@@ -62,4 +62,21 @@ public class StaffPageSteps {
         Assert.assertEquals(driver.findElement(By.xpath(CONFIG.getProperty("SearchedStaffRecord"))).getText(), staffName,
                 "Cannot verify searched staff is found");
     }
+
+    @And("^I click on view staff button$")
+    public void iClickViewStaffBtn() {
+        driver.findElement(By.xpath(CONFIG.getProperty("ViewStaffBtn"))).click();
+    }
+
+    @And("^I click on edit staff button$")
+    public void iClickEditStaffBtn() throws InterruptedException {
+        driver.findElement(By.xpath(CONFIG.getProperty("EditStaffBtn"))).click();
+        Thread.sleep(2000);
+    }
+
+    @And("^I click on delete staff button$")
+    public void iClickDeleteStaffBtn() {
+        driver.findElement(By.xpath(CONFIG.getProperty("DeleteStaffBtn"))).click();
+    }
+
 }

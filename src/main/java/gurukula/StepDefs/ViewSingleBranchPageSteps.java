@@ -24,9 +24,9 @@ public class ViewSingleBranchPageSteps {
                 "Cannot verify viewed branch is opened");
     }
 
-    @And("^I click back button$")
+    @And("^I click branch back button$")
     public void clickBackButton() {
-        driver.findElement(By.xpath(CONFIG.getProperty("BackBtn"))).click();
+        driver.findElement(By.xpath(CONFIG.getProperty("BranchPageBackBtn"))).click();
     }
 
 }

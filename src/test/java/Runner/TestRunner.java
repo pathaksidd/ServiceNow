@@ -6,7 +6,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
         plugin = {"html:target","json:target/cucumber.json","pretty:target/cucumber-pretty.txt",
         "usage:target/cucumber-usage.json", "junit:target/cucumber-results.xml"},
-        features = "src/test/resources/FeatureFiles/EditBranch.Feature",
+        features = "src/test/resources/FeatureFiles/ViewStaff.Feature",
         glue = "gurukula.StepDefs",
         format = {"html:target/Destination","json:target/Destination/cucumber.json"},
         tags = "@regression"

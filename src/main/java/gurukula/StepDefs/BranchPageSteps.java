@@ -29,7 +29,7 @@ public class BranchPageSteps {
     }
 
     @And("^I enter new branch name as \"([^\"]*)\" and code \"([^\"]*)\"$")
-    public void enterBranch(String branchName, String code) throws InterruptedException{
+    public void enterBranch(String branchName, String code) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CreateBranchForm"))));
         driver.findElement(By.xpath(CONFIG.getProperty("NewBranchName"))).clear();
         driver.findElement(By.xpath(CONFIG.getProperty("NewBranchName"))).sendKeys(branchName);
@@ -48,7 +48,7 @@ public class BranchPageSteps {
     }
 
     @And("^I enter branch name as \"([^\"]*)\" in search box and click search button$")
-    public void enterBranchNameInSearchBox(String branchName) throws InterruptedException{
+    public void enterBranchNameInSearchBox(String branchName) {
         driver.findElement(By.xpath(CONFIG.getProperty("SearchBranchTxtBox"))).sendKeys(branchName);
         driver.findElement(By.xpath(CONFIG.getProperty("SearchBranchBtn"))).click();
     }
@@ -77,13 +77,13 @@ public class BranchPageSteps {
     }
 
     @And("^I click on confirm delete branch$")
-    public void iClickConfirmDeleteBranchBtn() throws InterruptedException {
+    public void iClickConfirmDeleteBranchBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
         driver.findElement(By.xpath(CONFIG.getProperty("DeleteConfirmBtn"))).submit();
     }
 
     @And("^I click on cancel delete branch$")
-    public void iClickCancelDeleteBranchBtn() throws InterruptedException {
+    public void iClickCancelDeleteBranchBtn() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("DeleteBranchForm"))));
         driver.findElement(By.xpath(CONFIG.getProperty("DeleteCancelBtn"))).click();
     }

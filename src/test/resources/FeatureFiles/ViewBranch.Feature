@@ -15,7 +15,7 @@ Feature: View branch feature
     And I verify "<branchname>" branch is found
     Then I click on view branch button
     And I verify "<branchname>" branch details is viewed
-    And I click back button
+    And I click branch back button
     And I close the browser
 
     Examples: Login credentials
