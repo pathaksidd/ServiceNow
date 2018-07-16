@@ -15,6 +15,7 @@ Feature: Delete staff feature
     And I verify "<staffname>" staff is found
     And I click on delete staff button
     And I click on confirm delete staff
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
@@ -37,6 +38,7 @@ Feature: Delete staff feature
     And I verify "<staffname>" staff is found
     And I click on delete staff button
     And I click on cancel delete staff
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials

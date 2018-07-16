@@ -16,6 +16,7 @@ Feature: View staff feature
     And I click on view staff button
     And I verify "<staffname>" staff details is viewed
     And I click staff back button
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials

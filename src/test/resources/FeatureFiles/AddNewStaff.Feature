@@ -14,6 +14,7 @@ Feature: Add new staff feature
     Then I click on create new staff button
     And I enter new staff name as "<staffname>" and select branch as "<branchname>"
     And I click on save new staff
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
@@ -38,6 +39,7 @@ Feature: Add new staff feature
     Then I click on create new staff button
     And I enter new staff name as "<staffname>" and select branch as "<branchname>"
     And I click on cancel new staff
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials

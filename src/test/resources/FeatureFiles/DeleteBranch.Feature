@@ -15,6 +15,7 @@ Feature: Delete branch feature
     And I verify "<branchname>" branch is found
     Then I click on delete branch button
     And I click on confirm delete branch
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
@@ -37,6 +38,7 @@ Feature: Delete branch feature
     And I verify "<branchname>" branch is found
     Then I click on delete branch button
     And I click on cancel delete branch
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials

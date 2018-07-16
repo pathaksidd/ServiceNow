@@ -16,6 +16,7 @@ Feature: Edit branch feature
     Then I click on edit branch button
     And I enter new branch name as "<newbranchname>" and code "<newbranchcode>"
     And I click on save new branch
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
@@ -38,6 +39,7 @@ Feature: Edit branch feature
     And I verify "<branchname>" branch is found
     Then I click on edit branch button
     And I click on cancel new branch
+    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
