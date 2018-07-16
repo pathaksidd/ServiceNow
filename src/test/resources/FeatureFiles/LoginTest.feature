@@ -10,7 +10,8 @@ Feature: Login test validation
     When I click on login button
     Then I verify user has logged in
     And I validate the username displayed is "<username>"
-    Then I close the browser
+    Then I click on Logout option from Account dropdown
+    And I close the browser
 
     Examples: Login credentials
 

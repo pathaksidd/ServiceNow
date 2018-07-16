@@ -29,7 +29,7 @@ public class LandingPageSteps {
     }
 
     @And("^I click on Branch option from Entity dropdown$")
-    public void iSelectBranchEntityDropdownBtn() throws InterruptedException {
+    public void iSelectBranchEntityDropdownBtn() {
         driver.findElement(By.xpath(CONFIG.getProperty("EntityDropdown"))).click();
         driver.findElement(By.xpath(CONFIG.getProperty("EntityBranchOption"))).click();
     }
@@ -39,5 +39,11 @@ public class LandingPageSteps {
         driver.findElement(By.xpath(CONFIG.getProperty("EntityDropdown"))).click();
         driver.findElement(By.xpath(CONFIG.getProperty("EntityStaffOption"))).click();
         Thread.sleep(1000);
+    }
+
+    @And("^I click on Logout option from Account dropdown$")
+    public void iSelectLogoutAccountDropdownBtn() {
+        driver.findElement(By.xpath(CONFIG.getProperty("AccountDropdown"))).click();
+        driver.findElement(By.xpath(CONFIG.getProperty("Logout"))).click();
     }
 }
