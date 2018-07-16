@@ -42,5 +42,5 @@ Feature: Edit staff feature
 
     Examples: Login credentials
 
-      | username | password | staffname    | newstaffname  | newbranch |
-      | admin    | admin    | sid          | newkylian     | branchs   |
+      | username | password | staffname    |
+      | admin    | admin    | sid          |

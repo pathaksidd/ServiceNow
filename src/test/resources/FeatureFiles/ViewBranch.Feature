@@ -20,5 +20,5 @@ Feature: View branch feature
 
     Examples: Login credentials
 
-      | username | password | branchname | branchcode |
-      | admin    | admin    | branchb    | 0003       |
+      | username | password | branchname |
+      | admin    | admin    | branchb    |

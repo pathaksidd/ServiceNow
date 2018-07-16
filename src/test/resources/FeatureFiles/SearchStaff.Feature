@@ -16,5 +16,5 @@ Feature: Search staff feature
 
     Examples: Login credentials
 
-      | username | password | staffname | branchcode |
-      | admin    | admin    | kevin     | 0003       |
+      | username | password | staffname |
+      | admin    | admin    | kevin     |

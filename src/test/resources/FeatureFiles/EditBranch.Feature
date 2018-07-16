@@ -20,8 +20,8 @@ Feature: Edit branch feature
 
     Examples: Login credentials
 
-      | username | password | branchname | branchcode | newbranchname | newbranchcode |
-      | admin    | admin    | branchnn   | 0003       | newbranchnn   | 0003          |
+      | username | password | branchname | newbranchname | newbranchcode |
+      | admin    | admin    | branchnn   | newbranchnn   | 0003          |
 
   @regression
   Scenario Outline: Search for a branch, click edit and cancel
@@ -42,6 +42,6 @@ Feature: Edit branch feature
 
     Examples: Login credentials
 
-      | username | password | branchname | branchcode | newbranchname | newbranchcode |
-      | admin    | admin    | bbranch    | 0003       | newbranchnn   | 0003          |
+      | username | password | branchname |
+      | admin    | admin    | bbranch    |
 
