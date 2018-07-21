@@ -20,7 +20,7 @@ Feature: Add new branch feature
     Examples: Login credentials
 
       | username | password | branchname | branchcode |
-      | admin    | admin    | branchb    | 0003       |
+      | admin    | admin    | science    | 0003       |
 
   @regression
   Scenario Outline: Create a new branch and Cancel

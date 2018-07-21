@@ -16,13 +16,12 @@ Feature: Edit staff feature
     And I click on edit staff button
     And I enter new staff name as "<newstaffname>" and select branch as "<newbranch>"
     And I click on save new staff
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname | newstaffname | newbranch |
-      | admin    | admin    | oscar     | newoscar     | branchs   |
+      | admin    | admin    | aftab     | newaftab     | economics |
 
   @regression
   Scenario Outline: Search for a staff, edit it and cancel
@@ -39,10 +38,9 @@ Feature: Edit staff feature
     And I verify "<staffname>" staff is found
     And I click on edit staff button
     And I click on cancel new staff
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname    |
-      | admin    | admin    | sid          |
+      | admin    | admin    | quentin      |

@@ -13,10 +13,9 @@ Feature: Search branch feature
     And I verify user landed on Branches screen
     And I enter branch name as "<branchname>" in search box and click search button
     Then I verify "<branchname>" branch is found
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | branchname |
-      | admin    | admin    | branchb    |
+      | admin    | admin    | science    |

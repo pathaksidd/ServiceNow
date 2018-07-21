@@ -15,13 +15,12 @@ Feature: Delete staff feature
     And I verify "<staffname>" staff is found
     And I click on delete staff button
     And I click on confirm delete staff
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname    |
-      | admin    | admin    | newjames     |
+      | admin    | admin    | danny        |
 
   @regression
   Scenario Outline: Search for a staff, click delete and cancel
@@ -38,10 +37,9 @@ Feature: Delete staff feature
     And I verify "<staffname>" staff is found
     And I click on delete staff button
     And I click on cancel delete staff
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname    |
-      | admin    | admin    | newjames     |
+      | admin    | admin    | hector       |

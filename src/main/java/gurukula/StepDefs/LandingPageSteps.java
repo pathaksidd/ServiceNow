@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import static gurukula.Builder.processbuilder.*;
 
 public class LandingPageSteps {
@@ -43,7 +45,10 @@ public class LandingPageSteps {
 
     @And("^I click on Logout option from Account dropdown$")
     public void iSelectLogoutAccountDropdownBtn() {
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("AccountDropdown"))));
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         driver.findElement(By.xpath(CONFIG.getProperty("AccountDropdown"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("Logout"))));
         driver.findElement(By.xpath(CONFIG.getProperty("Logout"))).click();
     }
 }

@@ -13,10 +13,9 @@ Feature: Search staff feature
     And I verify user landed on Staffs screen
     Then I enter staff name as "<staffname>" in search box and click search button
     And I verify "<staffname>" staff is found
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname |
-      | admin    | admin    | kevin     |
+      | admin    | admin    | sridhar   |

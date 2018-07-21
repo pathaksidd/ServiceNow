@@ -20,7 +20,7 @@ Feature: Add new staff feature
     Examples: Login credentials
 
       | username | password | staffname  | branchname     |
-      | admin    | admin    | hector     |                |
+      | admin    | admin    | sridhar     |                |
 #      | admin    | admin    | james      | brancha        |
 #      | admin    | admin    | james      | kkbranch       |
 
@@ -39,10 +39,9 @@ Feature: Add new staff feature
     Then I click on create new staff button
     And I enter new staff name as "<staffname>" and select branch as "<branchname>"
     And I click on cancel new staff
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | staffname  | branchname    |
-      | admin    | admin    | benjy      | branchk       |
+      | admin    | admin    | benjy      |               |

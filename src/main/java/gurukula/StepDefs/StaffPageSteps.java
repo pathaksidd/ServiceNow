@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import static gurukula.Builder.processbuilder.*;
 
@@ -30,13 +30,13 @@ public class StaffPageSteps {
     }
 
     @And("^I enter new staff name as \"([^\"]*)\" and select branch as \"([^\"]*)\"$")
-    public void enterBranch(String staffName, String branchName) throws InterruptedException {
+    public void enterBranch(String staffName, String branchName) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CreateStaffForm"))));
         driver.findElement(By.xpath(CONFIG.getProperty("NewStaffName"))).clear();
         driver.findElement(By.xpath(CONFIG.getProperty("NewStaffName"))).sendKeys(staffName);
         Select branchDropdown = new Select(driver.findElement(By.xpath(CONFIG.getProperty("NewStaffBranchDropdown"))));
         branchDropdown.selectByVisibleText(branchName);
-        Thread.sleep(500);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @And("^I click on save new staff")

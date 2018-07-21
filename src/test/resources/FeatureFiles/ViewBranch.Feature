@@ -16,10 +16,9 @@ Feature: View branch feature
     Then I click on view branch button
     And I verify "<branchname>" branch details is viewed
     And I click branch back button
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
 
       | username | password | branchname |
-      | admin    | admin    | branchb    |
+      | admin    | admin    | economics  |
