@@ -1,0 +1,48 @@
+@regression
+Feature: Login test validation
+
+  Scenario Outline: Validate login successful scenarios   [90m# LoginTest.feature:4[0m
+    [36mGiven [0m[36mI navigate to Gurukula home page[0m
+    [36mAnd [0m[36mI click on link to Login page[0m
+    [36mAnd [0m[36mI enter username as "<username>"[0m
+    [36mAnd [0m[36mI enter password as "<password>"[0m
+    [36mWhen [0m[36mI click on login button[0m
+    [36mThen [0m[36mI verify user has logged in[0m
+    [36mAnd [0m[36mI validate the username displayed is "<username>"[0m
+    [36mThen [0m[36mI click on Logout option from Account dropdown[0m
+    [36mAnd [0m[36mI close the browser[0m
+
+    Examples: Login credentials
+
+  @regression
+  Scenario Outline: Validate login successful scenarios [90m# LoginTest.feature:19[0m
+    [32mGiven [0m[32mI navigate to Gurukula home page[0m              [90m# WelcomeSteps.iNavigateToGurukulaLoginPage()[0m
+    [32mAnd [0m[32mI click on link to Login page[0m                   [90m# WelcomeSteps.iClickOnLogin()[0m
+    [32mAnd [0m[32mI enter username as "[0m[32m[1madmin[0m[32m"[0m                     [90m# LoginSteps.iEnterUserName(String)[0m
+    [32mAnd [0m[32mI enter password as "[0m[32m[1madmin[0m[32m"[0m                     [90m# LoginSteps.iEnterPassword(String)[0m
+    [32mWhen [0m[32mI click on login button[0m                        [90m# LoginSteps.iClickLoginBtn()[0m
+    [32mThen [0m[32mI verify user has logged in[0m                    [90m# LandingPageSteps.verifyUserLoggedIn()[0m
+    [32mAnd [0m[32mI validate the username displayed is "[0m[32m[1madmin[0m[32m"[0m    [90m# LandingPageSteps.validateUsername(String)[0m
+    [32mThen [0m[32mI click on Logout option from Account dropdown[0m [90m# LandingPageSteps.iSelectLogoutAccountDropdownBtn()[0m
+    [32mAnd [0m[32mI close the browser[0m                             [90m# WelcomeSteps.i_close_the_browser()[0m
+
+  Scenario Outline: Validate login unsuccessful scenarios [90m# LoginTest.feature:21[0m
+    [36mGiven [0m[36mI navigate to Gurukula home page[0m
+    [36mAnd [0m[36mI click on link to Login page[0m
+    [36mAnd [0m[36mI enter username as "<username>"[0m
+    [36mAnd [0m[36mI enter password as "<password>"[0m
+    [36mWhen [0m[36mI click on login button[0m
+    [36mThen [0m[36mI validate Login failure[0m
+    [36mAnd [0m[36mI close the browser[0m
+
+    Examples: Login credentials
+
+  @regression
+  Scenario Outline: Validate login unsuccessful scenarios [90m# LoginTest.feature:34[0m
+    [32mGiven [0m[32mI navigate to Gurukula home page[0m                [90m# WelcomeSteps.iNavigateToGurukulaLoginPage()[0m
+    [32mAnd [0m[32mI click on link to Login page[0m                     [90m# WelcomeSteps.iClickOnLogin()[0m
+    [32mAnd [0m[32mI enter username as "[0m[32m[1madmin[0m[32m"[0m                       [90m# LoginSteps.iEnterUserName(String)[0m
+    [32mAnd [0m[32mI enter password as "[0m[32m[1mnotadmin[0m[32m"[0m                    [90m# LoginSteps.iEnterPassword(String)[0m
+    [32mWhen [0m[32mI click on login button[0m                          [90m# LoginSteps.iClickLoginBtn()[0m
+    [32mThen [0m[32mI validate Login failure[0m                         [90m# LoginSteps.iValidateLoginFailure()[0m
+    [32mAnd [0m[32mI close the browser[0m                               [90m# WelcomeSteps.i_close_the_browser()[0m

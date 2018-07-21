@@ -1,0 +1,8 @@
+gurukula\StepDefs\StaffPageSteps.class
+gurukula\StepDefs\ViewSingleStaffPageSteps.class
+gurukula\StepDefs\BranchPageSteps.class
+gurukula\Builder\processbuilder.class
+gurukula\StepDefs\LandingPageSteps.class
+gurukula\StepDefs\LoginSteps.class
+gurukula\StepDefs\WelcomeSteps.class
+gurukula\StepDefs\ViewSingleBranchPageSteps.class

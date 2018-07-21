@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="21.819986">
+<testcase classname="Login test validation" name="Validate login successful scenarios" time="11.484927">
+<system-out><![CDATA[Given I navigate to Gurukula home page......................................passed
+And I click on link to Login page...........................................passed
+And I enter username as "admin".............................................passed
+And I enter password as "admin".............................................passed
+When I click on login button................................................passed
+Then I verify user has logged in............................................passed
+And I validate the username displayed is "admin"............................passed
+Then I click on Logout option from Account dropdown.........................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login test validation" name="Validate login unsuccessful scenarios" time="10.335059">
+<system-out><![CDATA[Given I navigate to Gurukula home page......................................passed
+And I click on link to Login page...........................................passed
+And I enter username as "admin".............................................passed
+And I enter password as "notadmin"..........................................passed
+When I click on login button................................................passed
+Then I validate Login failure...............................................passed
+And I close the browser.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

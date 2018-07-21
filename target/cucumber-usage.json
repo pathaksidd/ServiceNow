@@ -1,0 +1,215 @@
+[
+  {
+    "source": "^I click on Logout option from Account dropdown$",
+    "steps": [
+      {
+        "name": "I click on Logout option from Account dropdown",
+        "aggregatedDurations": {
+          "average": 0.48115092,
+          "median": 0.48115092
+        },
+        "durations": [
+          {
+            "duration": 0.48115092,
+            "location": "LoginTest.feature:13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I validate the username displayed is \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I validate the username displayed is \"admin\"",
+        "aggregatedDurations": {
+          "average": 1.089327586,
+          "median": 1.089327586
+        },
+        "durations": [
+          {
+            "duration": 1.089327586,
+            "location": "LoginTest.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter username as \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I enter username as \"admin\"",
+        "aggregatedDurations": {
+          "average": 0.570250994,
+          "median": 0.570250994
+        },
+        "durations": [
+          {
+            "duration": 0.199029481,
+            "location": "LoginTest.feature:8"
+          },
+          {
+            "duration": 0.941472508,
+            "location": "LoginTest.feature:25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I navigate to Gurukula home page$",
+    "steps": [
+      {
+        "name": "I navigate to Gurukula home page",
+        "aggregatedDurations": {
+          "average": 7.805711066,
+          "median": 7.805711066
+        },
+        "durations": [
+          {
+            "duration": 8.04118012,
+            "location": "LoginTest.feature:6"
+          },
+          {
+            "duration": 7.570242013,
+            "location": "LoginTest.feature:23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I validate Login failure$",
+    "steps": [
+      {
+        "name": "I validate Login failure",
+        "aggregatedDurations": {
+          "average": 0.792916932,
+          "median": 0.792916932
+        },
+        "durations": [
+          {
+            "duration": 0.792916932,
+            "location": "LoginTest.feature:28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I enter password as \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I enter password as \"admin\"",
+        "aggregatedDurations": {
+          "average": 0.103824641,
+          "median": 0.103824641
+        },
+        "durations": [
+          {
+            "duration": 0.103824641,
+            "location": "LoginTest.feature:9"
+          }
+        ]
+      },
+      {
+        "name": "I enter password as \"notadmin\"",
+        "aggregatedDurations": {
+          "average": 0.195526136,
+          "median": 0.195526136
+        },
+        "durations": [
+          {
+            "duration": 0.195526136,
+            "location": "LoginTest.feature:26"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on login button$",
+    "steps": [
+      {
+        "name": "I click on login button",
+        "aggregatedDurations": {
+          "average": 0.113422915,
+          "median": 0.113422915
+        },
+        "durations": [
+          {
+            "duration": 0.103712596,
+            "location": "LoginTest.feature:10"
+          },
+          {
+            "duration": 0.123133235,
+            "location": "LoginTest.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I click on link to Login page$",
+    "steps": [
+      {
+        "name": "I click on link to Login page",
+        "aggregatedDurations": {
+          "average": 0.408335925,
+          "median": 0.408335925
+        },
+        "durations": [
+          {
+            "duration": 0.426128912,
+            "location": "LoginTest.feature:7"
+          },
+          {
+            "duration": 0.390542938,
+            "location": "LoginTest.feature:24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I verify user has logged in$",
+    "steps": [
+      {
+        "name": "I verify user has logged in",
+        "aggregatedDurations": {
+          "average": 0.777460221,
+          "median": 0.777460221
+        },
+        "durations": [
+          {
+            "duration": 0.777460221,
+            "location": "LoginTest.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I close the browser$",
+    "steps": [
+      {
+        "name": "I close the browser",
+        "aggregatedDurations": {
+          "average": 0.292168751,
+          "median": 0.292168751
+        },
+        "durations": [
+          {
+            "duration": 0.263112204,
+            "location": "LoginTest.feature:14"
+          },
+          {
+            "duration": 0.321225298,
+            "location": "LoginTest.feature:29"
+          }
+        ]
+      }
+    ]
+  }
+]
