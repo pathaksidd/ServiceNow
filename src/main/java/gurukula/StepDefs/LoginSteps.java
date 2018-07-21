@@ -32,11 +32,11 @@ public class LoginSteps {
     }
 
     @When("^I validate Login failure$")
-    public void iValidateLoginFailure() throws InterruptedException {
+    public void iValidateLoginFailure() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("FailureMsg"))));
         String expected = driver.findElement(By.xpath(CONFIG.getProperty("FailureMsg"))).getText();
         boolean contains = expected.contains("Authentication failed!");
         Assert.assertTrue(contains, "Cannot verify login failure message");
-        Thread.sleep(1000);
     }
 
 

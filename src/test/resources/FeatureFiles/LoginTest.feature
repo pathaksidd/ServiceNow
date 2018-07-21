@@ -1,6 +1,6 @@
+@regression
 Feature: Login test validation
 
-  @regression
   Scenario Outline: Validate login successful scenarios
 
     Given I navigate to Gurukula home page

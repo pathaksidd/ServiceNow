@@ -1,6 +1,6 @@
+@regression
 Feature: Delete branch feature
 
-  @regression
   Scenario Outline: Search for a branch and delete it
 
     Given I navigate to Gurukula home page
@@ -22,7 +22,6 @@ Feature: Delete branch feature
       | username | password | branchname |
       | admin    | admin    | science    |
 
-  @regression
   Scenario Outline: Search for a branch, click delete and cancel
 
     Given I navigate to Gurukula home page

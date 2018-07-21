@@ -1,6 +1,6 @@
+@regression
 Feature: Add new branch feature
 
-  @regression
   Scenario Outline: Create a new branch and save
 
     Given I navigate to Gurukula home page
@@ -22,7 +22,6 @@ Feature: Add new branch feature
       | username | password | branchname | branchcode |
       | admin    | admin    | science    | 0003       |
 
-  @regression
   Scenario Outline: Create a new branch and Cancel
 
     Given I navigate to Gurukula home page

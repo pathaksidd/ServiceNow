@@ -1,6 +1,6 @@
+@regression
 Feature: Delete staff feature
 
-  @regression
   Scenario Outline: Search for a staff and delete it
 
     Given I navigate to Gurukula home page
@@ -22,7 +22,6 @@ Feature: Delete staff feature
       | username | password | staffname    |
       | admin    | admin    | danny        |
 
-  @regression
   Scenario Outline: Search for a staff, click delete and cancel
 
     Given I navigate to Gurukula home page

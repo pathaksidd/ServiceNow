@@ -1,6 +1,6 @@
+@regression
 Feature: Search staff feature
 
-  @regression
   Scenario Outline: Search for a staff
 
     Given I navigate to Gurukula home page

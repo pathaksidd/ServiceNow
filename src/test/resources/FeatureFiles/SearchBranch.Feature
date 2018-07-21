@@ -1,6 +1,6 @@
+@regression
 Feature: Search branch feature
 
-  @regression
   Scenario Outline: Search for a branch
 
     Given I navigate to Gurukula home page

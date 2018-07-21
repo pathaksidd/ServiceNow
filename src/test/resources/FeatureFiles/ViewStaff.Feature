@@ -1,6 +1,6 @@
+@regression
 Feature: View staff feature
 
-  @regression
   Scenario Outline: Search for a staff and view it
 
     Given I navigate to Gurukula home page

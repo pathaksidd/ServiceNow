@@ -1,6 +1,6 @@
+@regression
 Feature: Edit branch feature
 
-  @regression
   Scenario Outline: Search for a branch and edit it
 
     Given I navigate to Gurukula home page
@@ -23,7 +23,6 @@ Feature: Edit branch feature
       | username | password | branchname | newbranchname | newbranchcode |
       | admin    | admin    | finance    | newfinance    | 0751          |
 
-  @regression
   Scenario Outline: Search for a branch, click edit and cancel
 
     Given I navigate to Gurukula home page

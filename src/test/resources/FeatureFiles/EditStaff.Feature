@@ -1,6 +1,6 @@
+@regression
 Feature: Edit staff feature
 
-  @regression
   Scenario Outline: Search for a staff, edit it and save
 
     Given I navigate to Gurukula home page
@@ -23,7 +23,6 @@ Feature: Edit staff feature
       | username | password | staffname | newstaffname | newbranch |
       | admin    | admin    | aftab     | newaftab     | economics |
 
-  @regression
   Scenario Outline: Search for a staff, edit it and cancel
 
     Given I navigate to Gurukula home page

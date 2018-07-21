@@ -1,6 +1,6 @@
+@regression
 Feature: Add new staff feature
 
-  @regression
   Scenario Outline: Create a new staff member and save
 
     Given I navigate to Gurukula home page
@@ -24,8 +24,6 @@ Feature: Add new staff feature
 #      | admin    | admin    | james      | brancha        |
 #      | admin    | admin    | james      | kkbranch       |
 
-
-  @regression
   Scenario Outline: Create a new staff member and cancel
 
     Given I navigate to Gurukula home page
