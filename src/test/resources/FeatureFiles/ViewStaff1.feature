@@ -21,4 +21,4 @@ Feature: View staff feature
     Examples: Login credentials
 
       | username | password | staffname |
-      | admin    | admin    | vinod     |
+      | admin    | admin    | quentin   |
