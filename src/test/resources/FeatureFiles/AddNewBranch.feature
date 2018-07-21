@@ -14,7 +14,6 @@ Feature: Add new branch feature
     Then I click on create new branch button
     And I enter new branch name as "<branchname>" and code "<branchcode>"
     And I click on save new branch
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
@@ -35,7 +34,6 @@ Feature: Add new branch feature
     Then I click on create new branch button
     And I enter new branch name as "<branchname>" and code "<branchcode>"
     And I click on cancel new branch
-    Then I click on Logout option from Account dropdown
     And I close the browser
 
     Examples: Login credentials
