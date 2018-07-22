@@ -1,10 +1,13 @@
 package gurukula.Builder;
 
-import cucumber.api.java.en.Then;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -30,9 +33,10 @@ public class processbuilder {
     public static void teardown(){
         driver.close();
     }
-//    @Given("^I run the gurukul application$")
-//    public void runApplication() throws IOException {
-//        ProcessBuilder pb = new ProcessBuilder("java", "-jar", "gurukula-0.0.1-SNAPSHOT.war");
-//        pb.start();
-//    }
+
+    public static void takeScreenshot() throws Exception {
+        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileHandler.copy(screenshot, new File(System.getProperty("user.dir") +
+                "\\target"));
+    }
 }
