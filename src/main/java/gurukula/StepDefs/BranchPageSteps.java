@@ -45,6 +45,7 @@ public class BranchPageSteps {
 
     @And("^I click on cancel new branch$")
     public void iClickCancelNewBranchBtn() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CancelBranchSaveBtn"))));
         driver.findElement(By.xpath(CONFIG.getProperty("CancelBranchSaveBtn"))).click();
     }
 

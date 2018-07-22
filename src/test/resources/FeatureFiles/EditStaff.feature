@@ -21,7 +21,7 @@ Feature: Edit staff feature
     Examples: Login credentials
 
       | username | password | staffname | newstaffname | newbranch  |
-      | admin    | admin    | newaftab  | aftab        | litreature |
+      | admin    | admin    | aftab     | newaftab     | litreature |
 
   Scenario Outline: Search for a staff, edit it and cancel
 

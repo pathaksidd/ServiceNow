@@ -20,5 +20,5 @@ Feature: View branch feature
 
     Examples: Login credentials
 
-      | username | password | branchname |
-      | admin    | admin    | litreature |
+      | username | password | branchname  |
+      | admin    | admin    | automobiles |

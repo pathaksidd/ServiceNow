@@ -21,7 +21,7 @@ Feature: Edit branch feature
     Examples: Login credentials
 
       | username | password | branchname | newbranchname | newbranchcode |
-      | admin    | admin    | newfinance | finance       | 0751          |
+      | admin    | admin    | economics  | neweconomics  | 0751          |
 
   Scenario Outline: Search for a branch, click edit and cancel
 

@@ -19,8 +19,8 @@ Feature: Delete branch feature
 
     Examples: Login credentials
 
-      | username | password | branchname |
-      | admin    | admin    | science    |
+      | username | password | branchname       |
+      | admin    | admin    | somenewbranch    |
 
   Scenario Outline: Search for a branch, click delete and cancel
 

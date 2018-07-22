@@ -20,7 +20,7 @@ Feature: Delete staff feature
     Examples: Login credentials
 
       | username | password | staffname    |
-      | admin    | admin    | sridhar      |
+      | admin    | admin    | timo         |
 
   Scenario Outline: Search for a staff, click delete and cancel
 

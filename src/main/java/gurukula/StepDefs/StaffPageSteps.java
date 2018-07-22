@@ -47,6 +47,7 @@ public class StaffPageSteps {
 
     @And("^I click on cancel new staff")
     public void iClickCancelNewStaffBtn() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CONFIG.getProperty("CancelStaffSaveBtn"))));
         driver.findElement(By.xpath(CONFIG.getProperty("CancelStaffSaveBtn"))).click();
     }
 

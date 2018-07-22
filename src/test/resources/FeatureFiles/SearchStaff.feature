@@ -18,4 +18,4 @@ Feature: Search staff feature
     Examples: Login credentials
 
       | username | password | staffname |
-      | admin    | admin    | hector   |
+      | admin    | admin    | vinod     |

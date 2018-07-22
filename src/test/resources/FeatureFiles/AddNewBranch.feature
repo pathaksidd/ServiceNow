@@ -19,7 +19,7 @@ Feature: Add new branch feature
     Examples: Login credentials
 
       | username | password | branchname | branchcode |
-      | admin    | admin    | litreature | 5015       |
+      | admin    | admin    | Chemistry  | 9851       |
 
   Scenario Outline: Create a new branch and Cancel
 
@@ -39,4 +39,4 @@ Feature: Add new branch feature
     Examples: Login credentials
 
       | username | password | branchname | branchcode |
-      | admin    | admin    | English    | 0002       |
+      | admin    | admin    | Physics    | 8124       |

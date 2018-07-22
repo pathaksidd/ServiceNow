@@ -19,9 +19,7 @@ Feature: Add new staff feature
     Examples: Login credentials
 
       | username | password | staffname  | branchname     |
-      | admin    | admin    | timo       | automobiles    |
-#      | admin    | admin    | james      | brancha        |
-#      | admin    | admin    | james      | kkbranch       |
+      | admin    | admin    | mesut      | automobiles    |
 
   Scenario Outline: Create a new staff member and cancel
 
@@ -41,4 +39,4 @@ Feature: Add new staff feature
     Examples: Login credentials
 
       | username | password | staffname  | branchname    |
-      | admin    | admin    | sommer     | automobiles   |
+      | admin    | admin    | jasper     | automobiles   |
