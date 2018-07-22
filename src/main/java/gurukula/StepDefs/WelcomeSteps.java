@@ -5,9 +5,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.io.IOException;
-
+import java.util.concurrent.TimeUnit;
 import static gurukula.Builder.processbuilder.*;
 
 public class WelcomeSteps {
@@ -27,9 +26,9 @@ public class WelcomeSteps {
     }
 
     @And("^I click on link to Register new user page$")
-    public void iClickOnRegisterUser() throws InterruptedException {
+    public void iClickOnRegisterUser() {
         driver.findElement(By.xpath(CONFIG.getProperty("RegisterBtn"))).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @Then("^I close the browser$")

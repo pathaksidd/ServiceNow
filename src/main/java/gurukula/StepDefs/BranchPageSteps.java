@@ -1,12 +1,13 @@
 package gurukula.StepDefs;
 
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
 import static gurukula.Builder.processbuilder.*;
 
 public class BranchPageSteps {
@@ -23,8 +24,8 @@ public class BranchPageSteps {
     }
 
     @Then("^I click on create new branch button$")
-    public void iClickCreateNewBranchBtn() throws InterruptedException {
-        Thread.sleep(500);
+    public void iClickCreateNewBranchBtn() {
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.findElement(By.xpath(CONFIG.getProperty("CreateNewBranchBtn"))).click();
     }
 
@@ -66,9 +67,9 @@ public class BranchPageSteps {
     }
 
     @And("^I click on edit branch button$")
-    public void iClickEditBranchBtn() throws InterruptedException {
+    public void iClickEditBranchBtn() {
         driver.findElement(By.xpath(CONFIG.getProperty("EditBranch"))).click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @And("^I click on delete branch button$")

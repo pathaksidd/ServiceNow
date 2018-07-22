@@ -24,9 +24,9 @@ public class StaffPageSteps {
     }
 
     @Then("^I click on create new staff button$")
-    public void iClickCreateNewBranchBtn() throws InterruptedException {
+    public void iClickCreateNewBranchBtn() {
         driver.findElement(By.xpath(CONFIG.getProperty("CreateNewStaffBtn"))).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @And("^I enter new staff name as \"([^\"]*)\" and select branch as \"([^\"]*)\"$")
@@ -40,9 +40,9 @@ public class StaffPageSteps {
     }
 
     @And("^I click on save new staff")
-    public void iClickSaveNewStaffBtn() throws InterruptedException {
+    public void iClickSaveNewStaffBtn() {
         driver.findElement(By.xpath(CONFIG.getProperty("SaveStaffBtn"))).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @And("^I click on cancel new staff")
@@ -51,10 +51,10 @@ public class StaffPageSteps {
     }
 
     @And("^I enter staff name as \"([^\"]*)\" in search box and click search button$")
-    public void enterStaffNameInSearchBox(String staffName) throws InterruptedException {
+    public void enterStaffNameInSearchBox(String staffName) {
         driver.findElement(By.xpath(CONFIG.getProperty("SearchStaffTxtBox"))).sendKeys(staffName);
         driver.findElement(By.xpath(CONFIG.getProperty("SearchStaffBtn"))).click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @Then("^I verify \"([^\"]*)\" staff is found$")
@@ -70,9 +70,9 @@ public class StaffPageSteps {
     }
 
     @And("^I click on edit staff button$")
-    public void iClickEditStaffBtn() throws InterruptedException {
+    public void iClickEditStaffBtn() {
         driver.findElement(By.xpath(CONFIG.getProperty("EditStaffBtn"))).click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
     }
 
     @And("^I click on delete staff button$")
